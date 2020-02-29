@@ -52,7 +52,7 @@ export default class Login extends Component {
       <div className='main-div'>
         <div className='login-div'>
           <div className='logo-div'>
-            <img src={Logo} />
+            <img src={Logo} alt='logo' />
             <p>SYMCRYPT</p>
           </div>
           <div className='input-div'>

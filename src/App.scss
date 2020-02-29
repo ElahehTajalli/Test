@@ -1,0 +1,121 @@
+/* ....................Login.......................... */
+/* ................................................... */
+*:focus {
+    outline: none;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+}
+
+.main-div {
+    background: #6083a2;
+    height: 100vh;
+    justify-content: center;
+    @extend .display;
+}
+  
+  
+.login-div {
+    @extend .display;
+    width: 40vh;
+    height: 65vh;
+    background: white;
+    justify-content: space-between;
+    flex-direction: column;
+
+    
+    p {
+        font-size: 20px;
+        color: #175071;
+    }
+}
+
+
+.logo-div {
+    @extend .display;
+    flex-direction: column;
+    margin-top: 35px;
+}
+
+.input-div {
+    @extend .display;
+    flex-direction: column;
+    position: relative;
+
+    input {
+        padding: 15px 15px 15px 35px;
+        margin-bottom: 20px;
+    
+        border: solid 1px darkgrey {
+            radius: 10px;
+        }
+    }
+
+    button {
+        background: white;
+        padding: 15px;
+        width: 244px;
+        color: #2a81a9;
+        box-shadow: 0 0 15px darkgrey;
+        cursor: pointer;
+        font-size: 14px;
+    
+        border: solid 1px white {
+            radius: 10px;
+        }
+    }
+}
+
+.style {
+    position: absolute;
+    left: 8px;
+    color: darkgrey;
+}
+
+.icon-style {
+    top: 10px;
+    @extend .style
+}
+
+.lock-style {
+    top: 77px;
+    @extend .style
+}
+
+.signup-div {
+    flex-direction: column;
+    @extend .display;
+
+    button {
+        background: linear-gradient(90deg, rgba(23,80,113,1) 50%, rgba(38,140,181,1) 100%);
+        width: 365px;
+        color: white;
+        padding: 16px 0;
+        margin-top: 17px;
+        cursor: pointer;
+        font-size: 14px;
+
+        border: none {
+            radius: 15px 15px 0  0 ;
+        }
+    }
+
+    a {
+        color: black;
+        text-decoration: none;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+}
+
+
+/* ..................... Charts ........................ */
+/* ..................................................... */
+
+.main-chart-div {
+    justify-content: center;
+    height: 100vh;
+    @extend .display;
+}

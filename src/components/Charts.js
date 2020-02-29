@@ -1,29 +1,44 @@
-import React from 'react'
-import Chart from 'react-google-charts'
+import React, { Component } from 'react'
+import Chart from 'react-apexcharts'
 
-const data = [
-  ['age', 'weight'],
-  ['Sun', 16],
-  ['Mon', 32],
-  ['Tue', 25],
-  ['Wed', 40],
-  ['Thu', 33],
-  ['Fri', 45],
-  ['Sat', 27]
-]
+export default class Charts extends Component {
+  constructor () {
+    super()
 
-export default class Charts extends React.Component {
+    this.state = {
+      options: {
+        xaxis: {
+          categories: ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+        },
+        chart: {
+          height: 350,
+          type: 'area'
+        },
+        stroke: {
+          curve: 'smooth'
+        }
+      },
+      series: [
+        {
+          data: [16, 32, 25, 40, 33, 45, 27]
+        }
+      ]
+    }
+  }
+
   render () {
     return (
-      <div className='App'>
-        <Chart
-          chartType='AreaChart'
-          width='100%'
-          height='600px'
-          legendToggle
-          data={data}
-        />
+      <div className='main-chart-div'>
+        <div>
+          <Chart
+            options={this.state.options}
+            series={this.state.series}
+            type='line'
+            width='500'
+          />
+        </div>
       </div>
+
     )
   }
 }

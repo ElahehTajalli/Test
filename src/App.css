@@ -87,9 +87,7 @@
 }
 
 .signup-div button {
-  background: #5d9de3;
   border: none;
-  background: rgb(34,27,138);
   background: linear-gradient(90deg, rgba(23,80,113,1) 50%, rgba(38,140,181,1) 100%);
   width: 365px;
   color: white;
@@ -107,4 +105,15 @@
   text-decoration: none;
   font-size: 12px;
   letter-spacing: 1px;
+}
+
+
+/* ..................... Charts ........................ */
+/* ..................................................... */
+
+.main-chart-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }

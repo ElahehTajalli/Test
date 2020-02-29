@@ -21,18 +21,18 @@ export default class Login extends Component {
     this.setState({ ...this.state, fields: { ...this.state.fields, [name]: event.target.value } })
   }
 
-//   signUp () {
-//     axios.post('https://symcrypt.docs.apiary.io/#reference/authentication/login', {
-//       username: this.state.fields.username,
-//       password: this.state.fields.password
-//     })
-//       .then((response) => {
+  signUp () {
+    axios.post('https://symcrypt.docs.apiary.io/#reference/authentication/login', {
+      username: this.state.fields.username,
+      password: this.state.fields.password
+    })
+      .then((response) => {
 
-//       })
-//       .catch((error) => {
-//         console.log(error)
-//       })
-//   }
+      })
+      .catch((error) => {
+        console.log(error)
+      })
+  }
 
   signIn () {
     axios.post('https://symcrypt.docs.apiary.io/#reference/authentication/login', {
@@ -48,7 +48,6 @@ export default class Login extends Component {
   }
 
   render () {
-    console.log(this.state)
     return (
       <div className='main-div'>
         <div className='login-div'>
@@ -73,7 +72,7 @@ export default class Login extends Component {
             <button onClick={() => this.signIn()}>SIGN IN</button>
           </div>
           <div className='signup-div'>
-            <a href='www.google.com'>Forgot password?</a>
+            <a href='http://google.com' target='_blank' rel='noopener noreferrer'>Forgot password?</a>
             <button onClick={() => this.signUp()}>SIGN UP</button>
           </div>
         </div>
